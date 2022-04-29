@@ -7,7 +7,7 @@ interface TodoDao {
     @Query("SELECT * From Todo")
     suspend fun getTodoList() : List<Todo>
 
-    @Query("SELECT * from Todo Where id")
+    @Query("SELECT * from Todo Where id=:id")
     suspend fun getTodoItemById(id : Int) : Todo
 
     @Insert
