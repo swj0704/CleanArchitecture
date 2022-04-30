@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initAction(){
         binding.writeButton.setOnClickListener {
-            // intent to write activity
+            startActivity(Intent(this, WriteTodoActivity::class.java))
         }
     }
 
