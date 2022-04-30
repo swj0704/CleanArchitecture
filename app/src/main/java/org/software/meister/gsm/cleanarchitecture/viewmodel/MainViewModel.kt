@@ -1,4 +1,4 @@
-package org.software.meister.gsm.cleanarchitecture.viwemodel
+package org.software.meister.gsm.cleanarchitecture.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="org.software.meister.gsm.cleanarchitecture.viwemodel.MainViewModel" />
+            type="org.software.meister.gsm.cleanarchitecture.viewmodel.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

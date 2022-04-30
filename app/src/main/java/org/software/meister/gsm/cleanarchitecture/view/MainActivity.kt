@@ -1,12 +1,12 @@
 package org.software.meister.gsm.cleanarchitecture.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import dagger.hilt.android.AndroidEntryPoint
-import org.software.meister.gsm.cleanarchitecture.R
 import org.software.meister.gsm.cleanarchitecture.databinding.ActivityMainBinding
-import org.software.meister.gsm.cleanarchitecture.viwemodel.MainViewModel
+import org.software.meister.gsm.cleanarchitecture.viewmodel.MainViewModel
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -35,7 +35,12 @@ class MainActivity : AppCompatActivity() {
     private fun initObserve(){
         with(viewModel){
             todoItem.observe(this@MainActivity) {
-                // intent to edit activity
+                val intent = Intent(this@MainActivity, EditTodoActivity::class.java)
+                intent.putExtra("id", it.id)
+                intent.putExtra("title", it.title)
+                intent.putExtra("text", it.text)
+                intent.putExtra("createdAt", it.createdAt)
+                startActivity(intent)
             }
         }
     }
