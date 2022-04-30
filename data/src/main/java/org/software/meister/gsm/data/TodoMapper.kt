@@ -7,7 +7,8 @@ object TodoMapper {
         return TodoItem(
             id = todo.id,
             title = todo.todoTItle,
-            text = todo.todoText
+            text = todo.todoText,
+            createdAt = todo.createdAt
         )
     }
 
@@ -15,14 +16,16 @@ object TodoMapper {
         return Todo(
             id = todoItem.id,
             todoTItle = todoItem.title,
-            todoText = todoItem.text
+            todoText = todoItem.text,
+            createdAt = todoItem.createdAt
         )
     }
 
     fun exchangeTodoItemInsert(todoItem: TodoItem) : Todo{
         return Todo(
             todoTItle = todoItem.title,
-            todoText = todoItem.text
+            todoText = todoItem.text,
+            createdAt = todoItem.createdAt
         )
     }
 }
